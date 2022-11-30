@@ -1,0 +1,306 @@
+/* ================================== APP (global style) ================================== */
+@font-face {
+    font-family: boldFont;
+    src: url("fonts/THEBOLDFONT.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /* === Color === */
+
+    --main-color: #26273d;
+    --secondary-color: hsl(0, 0%, 95%);
+
+    --main-color-txt: #cbcbcb;
+
+    --female-gender-color: #d4b9ca;
+    --male-gender-color: #bdb9d4;
+
+    --green-status-color: #91f8b4;
+    --orange-status-color: #deaa23;
+    --grey-status-color: #e9e9e9;
+
+    --card-stroke-color: #f2f2f2;
+
+    /* === fonts === */
+
+    --main-sans-serif-font: boldFont;
+    --second-sans-serif-font: "Raleway", sans-serif;
+
+    /* === Images === */
+
+    --size-photo: 500px;
+}
+
+/* ================================== REST CSS ================================== */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+
+li {
+    list-style-type: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input {
+    outline: none;
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    /* font-family: var(--main-sans-serif-font); */
+    height: 100vh;
+}
+
+/* // STYLES */
+
+.product-page-global-container {
+}
+
+.product-page-container {
+}
+
+.product-page-left {
+}
+
+.product-page-title-container {
+}
+.product-page-title-container span {
+}
+.product-page-title-container h1 {
+}
+
+/* a */
+
+.product-page-size-container {
+}
+
+.product-page-size-btns-container {
+}
+
+.product-page-size-btns-container button {
+}
+
+/* a */
+
+.product-page-size-card-container {
+}
+
+.product-page-size-card {
+}
+
+.size-card-status {
+}
+
+.size-card-number {
+}
+
+.size-card-left {
+}
+
+/* a */
+
+.product-page-description-container {
+}
+
+.product-page-description-container p {
+}
+
+/* a */
+
+.product-page-price-container {
+}
+
+.product-page-price-container span {
+}
+
+.product-page-price {
+}
+
+.product-page-price-reduce {
+}
+
+.product-page-price-container button {
+}
+
+.product-page-qty {
+}
+
+/* a */
+
+.product-page-add-btn {
+}
+
+/* a */
+/* a */
+
+.product-page-right {
+}
+
+.product-page-slider-container {
+}
+
+.product-page-slider-container button {
+}
+
+/* a */
+
+.product-page-main-picture {
+}
+
+/* a */
+
+.product-page-pictures-container {
+}
+
+.product-page-second-picture-box {
+}
+
+.product-page-second-picture-box img {
+}
