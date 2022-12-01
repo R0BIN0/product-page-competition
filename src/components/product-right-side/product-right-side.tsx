@@ -7,14 +7,15 @@ import "./product-right-side.css";
 // Assets
 import t from "../../assets/767haxmj 1.png";
 
-export default function ProductRightSide() {
-    console.log("render RIGHT");
+// Types
+import { ProductRightSideState } from "./product-right-side-types";
 
+export default function ProductRightSide({ handle }: ProductRightSideState) {
     return (
         <div className="product-page-right">
             <div className="product-page-slider-container">
-                <button>left</button>
-                <button>right</button>
+                <button onClick={() => handle(0)}>left</button>
+                <button onClick={() => handle(1)}>right</button>
             </div>
 
             <img className="product-page-main-picture" src={t} alt="" />

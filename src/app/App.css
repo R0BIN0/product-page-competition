@@ -1,7 +1,7 @@
 /* ================================== APP (global style) ================================== */
 @font-face {
     font-family: boldFont;
-    src: url("fonts/THEBOLDFONT.ttf");
+    src: url("../fonts/THEBOLDFONT.ttf");
     font-weight: normal;
     font-style: normal;
 }
