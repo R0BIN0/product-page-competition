@@ -16,6 +16,7 @@ html {
     /* === Color === */
 
     --main-color: #26273d;
+    --main-color-hover: #353753;
     --secondary-color: hsl(0, 0%, 95%);
     --tertiary-color: #f6f6f6;
 
@@ -264,14 +265,13 @@ body {
 
 .product-page-global-container {
     width: 100%;
+    min-height: 950px;
 }
 
 .product-page-container {
-    /* display: grid; */
-    /* grid-template-columns: 37.5% 62.5%; */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .product-page-left {
@@ -325,14 +325,34 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .product-page-size-btns-container button {
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
     margin-left: 0.5rem;
     border: var(--btn-border);
     border-radius: var(--border-radius-weak);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+.product-page-size-btns-container button:hover {
+    background-color: var(--tertiary-color);
+}
+
+.product-page-size-btns-container .btn-no-available {
+    background-color: var(--grey-status-color);
+}
+
+.product-page-size-btns-container .btn-no-available:hover {
+    background-color: var(--grey-status-color);
+}
+
+.product-page-size-btns-container button:nth-child(1) svg {
+    transform: rotate(180deg);
 }
 
 /* a */
@@ -340,23 +360,18 @@ body {
 .product-page-size-card-container {
     position: relative;
     width: 100%;
+    overflow: hidden;
+    padding: 1.5rem 0rem;
+    margin-bottom: 1rem;
+}
+
+.carousel-container {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    overflow: hidden;
-    padding-top: 0.5rem;
-    margin-bottom: 2rem;
-}
-
-.border-shadow {
-    min-width: 2px;
-    height: 175px;
-    background-color: rgb(131, 130, 130);
-    position: absolute;
-    top: 0.5rem;
-    right: 0;
-    z-index: 10;
-    box-shadow: -10px 0.5rem 20px 3px rgb(196, 194, 194);
+    transition: all 0.2s cubic-bezier(1, 0, 0, 1);
 }
 
 .product-page-size-card {
@@ -371,6 +386,19 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
+    transition: all 0.2s cubic-bezier(1, 0, 0, 1);
+}
+
+.product-page-size-card:hover {
+    transform: translateX(4.5px) translateY(-5px) rotate(-4deg);
+    background-color: var(--main-color-hover);
+    border: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.no-product-page-size-card {
+    background-color: var(--grey-status-color);
+    border: none;
 }
 
 .size-card-status {
@@ -379,15 +407,52 @@ body {
     right: -8px;
     width: 22.5px;
     height: 22.5px;
-    background-color: var(--green-status-color);
     border-radius: 50%;
     border: 3px solid var(--card-stroke-color);
+    transition: all 0.2s cubic-bezier(1, 0, 0, 1);
+}
+
+.product-page-size-card:hover .size-card-status {
+    border: 3px solid var(--main-color-hover);
+}
+
+.no-product-page-size-card:hover .size-card-status {
+    border: 3px solid var(--card-stroke-color);
+}
+
+.size-card-status-green {
+    background-color: var(--green-status-color);
+}
+
+.size-card-status-orange {
+    background-color: var(--orange-status-color);
+}
+
+.size-card-status-grey {
+    background-color: var(--grey-status-color);
 }
 
 .size-card-number {
     font-size: var(--fs-225);
     margin-bottom: 0.5rem;
     color: var(--main-color);
+    transition: all 0.2s cubic-bezier(1, 0, 0, 1);
+}
+
+.product-page-size-card:hover .size-card-number {
+    color: white;
+}
+
+.no-product-page-size-card .size-card-number {
+    color: var(--main-color-txt);
+}
+
+.no-product-page-size-card:hover {
+    background-color: var(--grey-status-color);
+}
+
+.no-product-page-size-card:hover .size-card-number {
+    color: var(--main-color-txt);
 }
 
 .size-card-left {
@@ -418,6 +483,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 75px;
 }
 
 .product-page-percentage {
@@ -438,7 +504,7 @@ body {
 .product-page-price {
     font-size: var(--fs-225);
     color: var(--main-color);
-    text-decoration: line-through red;
+    /* text-decoration: line-through red; */
     margin: 0.25rem 0;
 }
 
@@ -448,20 +514,36 @@ body {
     color: var(--danger-color);
 }
 
-.product-page-price-container button {
+.btnQty-container {
+    width: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnQty-container button {
     width: 35px;
     height: 35px;
     border: var(--btn-border);
     border-radius: var(--border-radius-weak);
+    background: white;
 }
 
-.product-page-price-container button:nth-child(3) {
+.btnQty-container button:hover {
+    background-color: var(--tertiary-color);
+}
+
+.btnQty-container button:nth-child(3) {
     background-color: var(--main-color);
     color: white;
 }
 
+.btnQty-container button:hover:nth-child(3) {
+    background-color: var(--main-color-hover);
+}
+
 .product-page-qty {
-    margin: 0 1rem;
+    transform: translateY(-2.5px); /* remove line-height of font */
     font-size: var(--fs-125);
 }
 
@@ -476,6 +558,10 @@ body {
     color: white;
     font-family: var(--second-sans-serif-font);
     font-weight: bold;
+}
+
+.product-page-add-btn:hover {
+    background-color: var(--main-color-hover);
 }
 
 /* a */
@@ -502,10 +588,15 @@ body {
 }
 
 .product-page-slider-container button {
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 0.75rem;
     margin-left: 0.5rem;
     border: var(--btn-border);
     border-radius: var(--border-radius-weak);
+    background: white;
+}
+
+.product-page-slider-container button:nth-child(1) svg {
+    transform: rotate(180deg);
 }
 
 /* a */
@@ -528,17 +619,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 500;
 }
 
 .product-page-second-picture-box {
     width: 115px;
     height: 115px;
+    border: 1px solid var(--secondary-color-txt);
     border-radius: var(--border-radius-strong);
     background-color: white;
     margin: 0 0.75rem;
 }
 
 .product-page-second-picture-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius-strong);
 }
 
 @media screen and (max-width: 1250px) {

@@ -2,9 +2,29 @@
 export enum ProductView {
     NIKE_AIR_MAX_1 = 0,
     NIKE_AIR_MAX_2 = 1,
-    NIKE_AIR_MAX_3 = 2,
 }
 export interface IProductView {
     id: ProductView;
-    color: string;
+    label: string;
+    title: string;
+    description: string;
+    pictures: Pictures;
+    price: string;
+    reduce: Discount | null;
+    sizes: Sizes[];
 }
+
+type Pictures = {
+    main: string;
+    others: string[];
+};
+
+type Discount = {
+    reduceAvailable: boolean;
+    minus: number;
+};
+
+type Sizes = {
+    size: number;
+    available: number;
+};

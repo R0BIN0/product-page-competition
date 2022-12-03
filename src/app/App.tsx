@@ -22,7 +22,7 @@ function App() {
         slideInProgress: false,
     });
 
-    const handle = (action: SliderAction): void => {
+    const handleSwitchShoes = (action: SliderAction): void => {
         if (initialState.slideInProgress) return;
 
         let newState = { ...initialState };
@@ -37,7 +37,6 @@ function App() {
                 if (!ProductViews[newShoes]) {
                     newShoes = 0;
                 }
-
                 break;
 
             case SliderAction.prev:
@@ -48,7 +47,6 @@ function App() {
                     const productsLength = Object.keys(ProductViews).length;
                     newShoes = productsLength - 1;
                 }
-
                 break;
         }
 
@@ -66,9 +64,8 @@ function App() {
     return (
         <div className="product-page-global-container">
             <div className="product-page-container">
-                <p>{initialState.shoes.color}</p>
-                <ProductLeftSide />
-                <ProductRightSide handle={handle} />
+                <ProductLeftSide initialState={initialState} />
+                <ProductRightSide initialState={initialState} handleSwitchShoes={handleSwitchShoes} />
             </div>
         </div>
     );
