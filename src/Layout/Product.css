@@ -1,0 +1,19 @@
+.product-page-global-container {
+    width: 100%;
+    min-height: 950px;
+}
+
+.product-page-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 1024px) {
+    .product-page-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+    }
+}

@@ -1,0 +1,113 @@
+.product-page-right {
+    position: relative;
+    background-color: var(--tertiary-color);
+    height: 100vh;
+    width: 100%;
+}
+
+.product-page-slider-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    z-index: 100;
+}
+
+.product-page-slider-container button {
+    padding: 0.5rem 0.75rem;
+    margin-left: 0.5rem;
+    border: var(--btn-border);
+    border-radius: var(--border-radius-weak);
+    background: white;
+}
+
+.product-page-slider-container button:nth-child(1) svg {
+    transform: rotate(180deg);
+}
+
+/* a */
+
+.product-page-main-picture-container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-page-main-picture {
+    width: 75%;
+    height: max-content;
+}
+
+/* a */
+
+.product-page-pictures-container {
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+}
+
+.product-page-second-picture-box {
+    width: 115px;
+    height: 115px;
+    border: 1px solid var(--secondary-color-txt);
+    border-radius: var(--border-radius-strong);
+    background-color: white;
+    margin: 0 0.75rem;
+}
+
+.product-page-second-picture-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius-strong);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1250px) {
+    .product-page-second-picture-box {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .product-page-right {
+        order: -1;
+        height: 500px;
+    }
+
+    .product-page-main-picture-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: initial;
+    }
+
+    .product-page-pictures-container {
+        height: 125px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .product-page-right {
+        height: 400px;
+    }
+
+    .product-page-second-picture-box {
+        width: 60px;
+        height: 60px;
+    }
+}

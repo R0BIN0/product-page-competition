@@ -1,0 +1,118 @@
+.product-page-left {
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+    padding: var(--padding-gap);
+    width: 100%;
+    max-width: 725px;
+    min-width: 400px;
+}
+
+.product-page-title-container {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.product-page-title-container span {
+    color: var(--danger-color);
+    font-family: var(--second-sans-serif-font);
+    font-weight: 700;
+    font-size: var(--fs-100);
+}
+.product-page-title-container h1 {
+    color: var(--main-color);
+    font-size: var(--fs-275);
+    max-width: 450px;
+    margin: 0.5rem 0 3rem 0;
+}
+
+.product-page-title-container h2 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20rem;
+    color: rgba(0, 0, 0, 0.01);
+    pointer-events: none;
+}
+
+.product-page-description-container {
+    margin-bottom: 3rem;
+}
+
+.product-page-description-container p {
+    font-family: var(--second-sans-serif-font);
+    font-weight: 500;
+    color: var(--main-color-txt);
+    line-height: 1.75;
+    max-width: 500px;
+    font-size: var(--fs-90);
+}
+
+.product-page-price-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 75px;
+}
+
+.product-page-percentage {
+    font-size: var(--fs-100);
+    background-color: var(--danger-color);
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--border-radius-weak);
+    display: inline-block;
+}
+
+.product-page-reduced-price-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-page-price {
+    font-size: var(--fs-225);
+    color: var(--main-color);
+    margin: 0.25rem 0;
+}
+
+.product-page-price-reduce {
+    font-size: var(--fs-150);
+    margin-left: 1rem;
+    color: var(--danger-color);
+}
+
+.product-page-add-btn {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1rem;
+    border-radius: var(--border-radius-weak);
+    background-color: var(--main-color);
+    color: white;
+    font-family: var(--second-sans-serif-font);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-page-add-btn svg {
+    margin-left: 0.5rem;
+}
+
+.product-page-add-btn:hover {
+    background-color: var(--main-color-hover);
+}
+
+@media screen and (max-width: 1024px) {
+    .product-page-left {
+        min-height: initial;
+        height: initial;
+        justify-content: flex-start;
+        min-width: initial;
+    }
+}

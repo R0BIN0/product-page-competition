@@ -1,0 +1,41 @@
+.btnQty-container {
+    width: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnQty-container button {
+    width: 35px;
+    height: 35px;
+    border: var(--btn-border);
+    border-radius: var(--border-radius-weak);
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s cubic-bezier(1, 0, 0, 1);
+}
+
+.btnQty-container button:hover {
+    background-color: var(--tertiary-color);
+    transform: translateX(1.5px) translateY(-2px) rotate(-1deg);
+}
+
+.btnQty-container button:active {
+    transform: translateX(0.5px) translateY(-1px) rotate(0deg) scale(0.95);
+}
+
+.btnQty-container button:nth-child(3) {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.btnQty-container button:hover:nth-child(3) {
+    background-color: var(--main-color-hover);
+}
+
+.product-page-qty {
+    transform: translateY(-2.5px); /* remove line-height of font */
+    font-size: var(--fs-125);
+}

@@ -1,8 +1,12 @@
 // Global
-import React, { useState } from "react";
+import { useState } from "react";
 
 // Styles
 import "./BtnQty.css";
+
+// Assets
+import { ReactComponent as Minus } from "../../assets/minus.svg";
+import { ReactComponent as Add } from "../../assets/add.svg";
 
 // Types
 import { BtnQtyState, UpdateQtyAction } from "./BtnQtyTypes";
@@ -35,9 +39,13 @@ const BtnQty = () => {
 
     return (
         <div className="btnQty-container">
-            <button onClick={() => handleUpdateQty(0)}>-</button>
+            <button onClick={() => handleUpdateQty(0)}>
+                <Minus />
+            </button>
             <span className="product-page-qty">{data.qty}</span>
-            <button onClick={() => handleUpdateQty(1)}>+</button>
+            <button onClick={() => handleUpdateQty(1)}>
+                <Add />
+            </button>
         </div>
     );
 };
