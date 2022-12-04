@@ -15,7 +15,6 @@ function App() {
     return (
         <AnimatePresence exitBeforeEnter>
             <Routes location={location} key={location.pathname}>
-                <Route path="/" element={<Product />} />
                 <Route path="/:id" element={<Product />} />
             </Routes>
         </AnimatePresence>
