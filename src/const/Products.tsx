@@ -105,7 +105,7 @@ const secondProduct: IProductView = {
             available: 5,
         },
         {
-            size: 42,
+            size: 45,
             available: 2,
         },
     ],
