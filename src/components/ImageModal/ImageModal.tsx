@@ -11,7 +11,7 @@ import { ReactComponent as Cross } from "../../assets/cross.svg";
 
 // Types
 import { ImageModalState, ImageModalProps } from "./ImageModalTypes";
-import { SliderAction } from "../../hooks/useSlider/useSliderTypes";
+import { SliderAction } from "../../types/types";
 import { useEffect } from "react";
 
 const ImageModal = ({ currentPicture, images, handleOpenModal }: ImageModalProps) => {

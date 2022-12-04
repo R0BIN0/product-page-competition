@@ -17,7 +17,7 @@ import {
 
 // Types
 import { SizeSliderState, SizeSliderProps } from "./SizeSliderTypes";
-import { SliderAction } from "../../hooks/useSlider/useSliderTypes";
+import { SliderAction } from "../../types/types";
 import { useEffect } from "react";
 
 const propsAreEqual = (prevProps: SizeSliderProps, nextProps: SizeSliderProps) => {

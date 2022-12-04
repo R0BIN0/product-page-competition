@@ -1,5 +1,5 @@
 // Types
-import { SliderAction } from "../../hooks/useSlider/useSliderTypes";
+import { SliderAction } from "../../types/types";
 import { AppState } from "../../app/AppTypes";
 
 export type ProductRightSideState = {

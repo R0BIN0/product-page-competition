@@ -15,7 +15,7 @@ import { ProductViews } from "../const/Products";
 
 // Types
 import { AppState } from "../app/AppTypes";
-import { SliderAction } from "../hooks/useSlider/useSliderTypes";
+import { SliderAction } from "../types/types";
 
 export default function Product() {
     const location = useLocation();
